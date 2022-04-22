@@ -1,12 +1,33 @@
+// function to hide start-container and show game-container
+
+document.getElementById("game-container").style.display = "none";
+document.getElementById("end-container").style.display = "none";
+document.getElementById("startButton").addEventListener("click", function() {
+    document.getElementById("start-container").style.display = "none";
+});
+document.getElementById("startButton").addEventListener("click", function() {
+    document.getElementById("game-container").style.display = "block";
+});
+
+// function to hide game-container and show end-container
+/* once last round
+    document.getElementById("game-container").style.display = "none";
+
+    document.getElementById("end-container").style.display = "block";
+*/
+
+// function for computer to randomly choose an option
 function computerPlay(){
     plays = ["rock", "paper", "scissors"];
     return randomPlay = plays[Math.floor(Math.random()*plays.length)];
 }
 
+// function to capitalize a word
 function capitalize(word){
     return word[0].toUpperCase() + word.slice(1);
 }
 
+// function to play a single round
 function playRound(playerSelection, computerSelection){
     playerSelection = playerSelection.toLowerCase();
     if (playerSelection === computerSelection){
@@ -33,6 +54,7 @@ function playRound(playerSelection, computerSelection){
     console.log("Invalid input. Try again!");
 }
 
+// main function: play 5 rounds with user input
 function game(){
     let playerScore = 0;
     let computerScore = 0;
@@ -61,5 +83,3 @@ function game(){
         console.log("It's a draw!");
     }
 }
-
-game();

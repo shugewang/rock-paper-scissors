@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Raleway&display=swap');
+
+
+body * {
+    border: 2px solid red;
+}
+
+
+:root{
+    --main-blue:#EDF2EF;
+    --main-dark:#1B263B;
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-size:20px;
+    background-color:var(--main-blue);
+    color:var(--main-dark);
+    margin:5vh 5vw;
+    
+}
+
+h1 {
+    font-family: 'Barrio', cursive;
+}
+#title{
+    font-size: clamp(2rem, 2vw, 3rem);
+    text-align: center;
+}
+
+#start-container {
+    margin: 1vh 0 ;
+}
+#rules{
+
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+}
+
+#rules p{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#start{
+    display:flex;
+    justify-content: center;
+}
+
+#startButton{
+    font-family: 'Barrio', cursive;
+    font-size:2rem;
+    min-width:100px;
+    min-height:50px;
+    background-color:var(--main-dark);
+    color:var(--main-blue);
+    margin:1rem;
+    padding:1rem;
+    border-radius:1rem;
+}
+
+#startButton:hover{
+    transform:scale(1.2);
+}
+
+#game-container{
+    display:flex;
+    flex-direction:column;
+    margin:1vh 0;
+    font-family: 'Barrio', cursive;
+}
+
+.flex-even {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+}
+
+.half {
+    flex:50%;
+    text-align:center;
+}
+
+.choice {
+    min-width: 15%;
+    aspect-ratio: 1;
+}
+
+#scores {
+    height:20vh;
+    display:flex;
+}
+
+#end-container{
+    display:flex;
+    height:10vh;
+}

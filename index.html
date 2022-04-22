@@ -1,1 +1,72 @@
-<script src="myScript.js"></script>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="myScript.js" defer></script>
+        <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale = 1">
+    </head>
+
+    <body>
+        <div id="title">
+            <h1>Rock Paper Scissiors Championship</h1>
+        </div>
+
+        <div id="start-container">
+            <div id="rules">
+                <p>Welcome to the &nbsp; <span class="iconify" data-icon="noto:rock"></span> <span class="iconify" data-icon="noto:newspaper"></span> <span class="iconify" data-icon="noto:scissors" data-rotate="180deg"></span> &nbsp; Championship.</p>
+                <p>It's &nbsp;<strong>You</strong> &nbsp; versus &nbsp;<strong>The Machine</strong>.</p>
+                <p>First to 5 wins the Game.</p>
+                <p>And the Championship Belt.</p><br>
+                <p><strong>Are you up for the challenge?</strong></p>
+            </div>
+
+            <div id="start">
+                <button id="startButton">YES</button>
+            </div>
+        </div>
+        
+        <div id="game-container">
+            <div class = "flex-even" id="game">
+                <div class="half" id="player">
+                    <h1>Player</h1>
+                    <div class = "flex-even" id="player-choice">
+                        <button class="choice">Rock</button>
+                        <button class="choice">Paper</button>
+                        <button class="choice">Scissors</button>
+                    </div>
+                </div>
+                <div class="half" id="computer">
+                    <h1>The Machine</h1>
+                    <div class = "flex-even" id="computer-choice">
+                        <p class="choice">tmp</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="scores">
+                <div class="half" id="updates">
+                    <h1>updates</h1>
+                </div>
+
+                <div class="half" id="scoreboard">
+                    <h1>scoreboard</h1>
+                    <div class="flex-even">
+                        <div class="half" id="player-score">
+                            <h2>player score</h2>
+                        </div>
+                        <div class="half" id="computer-score">
+                            <h2>Machine score</h2>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div id="end-container">
+            <h1>The winner is...</h1>
+        </div>
+    </body>
+
+</html>
