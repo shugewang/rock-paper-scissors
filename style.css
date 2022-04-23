@@ -44,6 +44,10 @@ h1{
     text-align: center;
 }
 
+#rules{
+    font-size:1.5rem;
+}
+
 button, .output {
     font-family: 'Barrio', cursive;
     background-color:var(--main-dark);
