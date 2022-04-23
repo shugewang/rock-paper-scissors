@@ -42,7 +42,7 @@ function startGame(){
     document.getElementById("start-container").style.display = "block";
     document.getElementById("game-container").style.display = "none";
     document.getElementById("end-container").style.display = "none";
-    document.getElementById("computer-choice").style.display = "none";
+    //document.getElementById("computer-choice").style.display = "none";
     document.getElementById("start-button").addEventListener("click", function() {
         document.getElementById("start-container").style.display = "none";
     });

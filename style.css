@@ -53,6 +53,7 @@ button, .output {
     background-color:var(--main-dark);
     color:var(--main-blue);
     border-radius:1rem;
+    font-size:2rem;
 }
 #start-button, #restart{
     font-size:2rem;
@@ -98,6 +99,8 @@ button:hover{
     aspect-ratio: 1;
     font-size:20px;
 }
+
+
 #scoreboard p {
     font-size:2rem;
 }
