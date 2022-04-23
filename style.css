@@ -27,6 +27,11 @@ body {
 h1 {
     font-family: 'Barrio', cursive;
 }
+
+p {
+    text-align:center;
+}
+
 #title{
     font-size: clamp(2rem, 2vw, 3rem);
     text-align: center;
@@ -78,7 +83,7 @@ h1 {
 .flex-even {
     display: flex;
     justify-content: space-evenly;
-    margin: 1rem;
+  
 }
 
 .half {
@@ -86,7 +91,7 @@ h1 {
     text-align:center;
 }
 
-.choice {
+.output {
     min-width: 15%;
     aspect-ratio: 1;
 }

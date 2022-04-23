@@ -3,7 +3,7 @@
     <head>
         <title>Rock Paper Scissors</title>
         <link rel="stylesheet" href="style.css">
-        <script src="myScript.js" defer></script>
+        
         <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale = 1">
     </head>
@@ -32,15 +32,15 @@
                 <div class="half" id="player">
                     <h1>Player</h1>
                     <div class = "flex-even" id="player-choice">
-                        <button class="choice">Rock</button>
-                        <button class="choice">Paper</button>
-                        <button class="choice">Scissors</button>
+                        <button id="rockBtn" class="output" type="submit" value="rock">Rock</button>
+                        <button id="paperBtn" class="output" type="submit" value="paper">Paper</button>
+                        <button id="scissorsBtn" class="output" type="submit" value="scissors">Scissors</button>
                     </div>
                 </div>
                 <div class="half" id="computer">
                     <h1>The Machine</h1>
-                    <div class = "flex-even" id="computer-choice">
-                        <p class="choice">tmp</p>
+                    <div class = "flex-even">
+                        <p class="output" id="computer-choice">tmp</p>
                     </div>
                 </div>
             </div>
@@ -53,11 +53,13 @@
                 <div class="half" id="scoreboard">
                     <h1>scoreboard</h1>
                     <div class="flex-even">
-                        <div class="half" id="player-score">
+                        <div class="half">
                             <h2>player score</h2>
+                            <p id="player-score">0</p>
                         </div>
-                        <div class="half" id="computer-score">
+                        <div class="half">
                             <h2>Machine score</h2>
+                            <p id="computer-score">0</p>
                         </div>
                 </div>
             </div>
@@ -66,7 +68,11 @@
 
         <div id="end-container">
             <h1>The winner is...</h1>
+            <p id="winner"></p>
+            <p id="final-score"></p>
         </div>
     </body>
+    <script src="myScript.js" defer></script>
 
 </html>
+ 
