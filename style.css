@@ -20,16 +20,20 @@ body {
     font-size:20px;
     background-color:var(--main-blue);
     color:var(--main-dark);
-    margin:5vh 5vw;
-    
-}
-
-h1 {
     font-family: 'Barrio', cursive;
+    line-height: 1.6;
+    margin:5vh 5vw;
+    width: 90vw;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap: 5vh;
 }
 
 p {
-    text-align:center;
+    display:flex;
+    align-items: center;
+    justify-content: center;;
 }
 
 #title{
@@ -37,71 +41,64 @@ p {
     text-align: center;
 }
 
-#start-container {
-    margin: 1vh 0 ;
-}
-#rules{
-
-    font-family: 'Raleway', sans-serif;
-    line-height: 1.6;
-}
-
-#rules p{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#start{
-    display:flex;
-    justify-content: center;
-}
-
-#startButton{
+button, .output {
     font-family: 'Barrio', cursive;
+    background-color:var(--main-dark);
+    color:var(--main-blue);
+    border-radius:1rem;
+}
+#start-button, #restart{
     font-size:2rem;
     min-width:100px;
     min-height:50px;
-    background-color:var(--main-dark);
-    color:var(--main-blue);
     margin:1rem;
     padding:1rem;
-    border-radius:1rem;
 }
 
-#startButton:hover{
+button:hover{
     transform:scale(1.2);
 }
 
 #game-container{
     display:flex;
     flex-direction:column;
-    margin:1vh 0;
-    font-family: 'Barrio', cursive;
+    gap:5vh;
+}
+
+#game, #scores{
+    display:flex;
+    height:20vh;
+
 }
 
 .flex-even {
     display: flex;
     justify-content: space-evenly;
-  
 }
 
-.half {
+.take-half {
     flex:50%;
     text-align:center;
+}
+
+.flex-center {
+    display:flex;
+    justify-content:center;
 }
 
 .output {
     min-width: 15%;
     aspect-ratio: 1;
 }
-
-#scores {
-    height:20vh;
-    display:flex;
+#scoreboard p {
+    font-size:2rem;
 }
 
 #end-container{
-    display:flex;
+
     height:10vh;
+}
+
+#winner {
+    font-size:clamp(2rem, 20vw, 10rem);
 }

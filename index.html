@@ -3,7 +3,6 @@
     <head>
         <title>Rock Paper Scissors</title>
         <link rel="stylesheet" href="style.css">
-        
         <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale = 1">
     </head>
@@ -14,22 +13,21 @@
         </div>
 
         <div id="start-container">
-            <div id="rules">
+            <div  id="rules">
                 <p>Welcome to the &nbsp; <span class="iconify" data-icon="noto:rock"></span> <span class="iconify" data-icon="noto:newspaper"></span> <span class="iconify" data-icon="noto:scissors" data-rotate="180deg"></span> &nbsp; Championship.</p>
                 <p>It's &nbsp;<strong>You</strong> &nbsp; versus &nbsp;<strong>The Machine</strong>.</p>
-                <p>First to 5 wins the Game.</p>
-                <p>And the Championship Belt.</p><br>
+                <p>First to 5 wins the Game.</p><br>
                 <p><strong>Are you up for the challenge?</strong></p>
             </div>
 
-            <div id="start">
-                <button id="startButton">YES</button>
+            <div class="flex-center" id="start">
+                <button id="start-button">YES</button>
             </div>
         </div>
         
         <div id="game-container">
             <div class = "flex-even" id="game">
-                <div class="half" id="player">
+                <div class="take-half" id="player">
                     <h1>Player</h1>
                     <div class = "flex-even" id="player-choice">
                         <button id="rockBtn" class="output" type="submit" value="rock">Rock</button>
@@ -37,7 +35,7 @@
                         <button id="scissorsBtn" class="output" type="submit" value="scissors">Scissors</button>
                     </div>
                 </div>
-                <div class="half" id="computer">
+                <div class="take-half" id="computer">
                     <h1>The Machine</h1>
                     <div class = "flex-even">
                         <p class="output" id="computer-choice">tmp</p>
@@ -46,18 +44,18 @@
             </div>
 
             <div id="scores">
-                <div class="half" id="updates">
+                <div class="take-half" id="updates">
                     <h1>updates</h1>
                 </div>
 
-                <div class="half" id="scoreboard">
+                <div class="take-half" id="scoreboard">
                     <h1>scoreboard</h1>
                     <div class="flex-even">
-                        <div class="half">
+                        <div class="take-half">
                             <h2>player score</h2>
                             <p id="player-score">0</p>
                         </div>
-                        <div class="half">
+                        <div class="take-half">
                             <h2>Machine score</h2>
                             <p id="computer-score">0</p>
                         </div>
@@ -68,8 +66,11 @@
 
         <div id="end-container">
             <h1>The winner is...</h1>
-            <p id="winner"></p>
+            <h1 class="flex-center" id="winner"></h1>
             <p id="final-score"></p>
+            <div class="flex-center">
+                <button id="restart">Play again?</button>
+            </div>
         </div>
     </body>
     <script src="myScript.js" defer></script>

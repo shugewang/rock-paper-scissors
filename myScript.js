@@ -14,7 +14,6 @@ function capitalize(word){
 
 // function to play a single round
 function playRound(playerSelection, computerSelection){
-    playerSelection = playerSelection.toLowerCase();
     if (playerSelection === computerSelection){
         return "draw";
     }
@@ -36,51 +35,36 @@ function playRound(playerSelection, computerSelection){
     if (playerSelection === "scissors" && computerSelection === "paper"){
         return "player";
     }
-    console.log("Invalid input. Try again!");
 }
 
 // function to hide start-container and show game-container
-document.getElementById("game-container").style.display = "none";
-document.getElementById("end-container").style.display = "none";
-document.getElementById("startButton").addEventListener("click", function() {
-    document.getElementById("start-container").style.display = "none";
-});
-document.getElementById("startButton").addEventListener("click", function() {
-    document.getElementById("game-container").style.display = "block";
-});
+function startGame(){
+    document.getElementById("start-container").style.display = "block";
+    document.getElementById("game-container").style.display = "none";
+    document.getElementById("end-container").style.display = "none";
+    document.getElementById("computer-choice").style.display = "none";
+    document.getElementById("start-button").addEventListener("click", function() {
+        document.getElementById("start-container").style.display = "none";
+    });
+    document.getElementById("start-button").addEventListener("click", function() {
+        document.getElementById("game-container").style.display = "flex";
+    });
+}
 
+// function to hide game-container and show end-container; report winner
 function finishGame (){
     let champion = "";
-        //hide 
-        document.getElementById("game-container").style.display = "none";
-        document.getElementById("end-container").style.display = "block";
-        if (computerScore > playerScore) {
-            champion = "The Machine!";
-        } else {
-            champion = "You!";
-        }
-        document.getElementById("winner").innerHTML = champion;
+    document.getElementById("game-container").style.display = "none";
+    document.getElementById("end-container").style.display = "block";
+    if (computerScore > playerScore) {
+        champion = "The Machine!";
+    } else {
+        champion = "You!";
+    }
+    document.getElementById("winner").innerHTML = champion;
 }
 
-// set global variables
-let playerScore = 0;
-let computerScore = 0;
-let anyScore = 0;
-// main game function
-function game() {
-    document.getElementById("rockBtn").addEventListener("click", function () {
-        updateScore("rock");
-    })
-    document.getElementById("paperBtn").addEventListener("click", function () {
-        updateScore("paper");
-    })
-    document.getElementById("scissorsBtn").addEventListener("click", function () {
-        updateScore("scissors");
-    })
-    
-}
-
-// play a round and update score
+// update score
 function updateScore(playerSelection){
     let computerSelection = getRandomChoice();
     let winner = playRound(playerSelection, computerSelection);
@@ -94,20 +78,45 @@ function updateScore(playerSelection){
     } else {
         result = "It's a draw!";
     }
-    console.log("Your score: " + playerScore);
-    console.log("Computer score:" + computerScore);
-    console.log(result);
 
     let update = document.createElement("p");
     let node = document.createTextNode(result);
     update.appendChild(node);
     document.getElementById("updates").appendChild(update);
-
     document.getElementById("player-score").innerHTML = playerScore;
     document.getElementById("computer-score").innerHTML = computerScore;
-    
+    document.getElementById("computer-choice").style.display = "flex";
     if (computerScore == 5 || playerScore == 5){
         finishGame();
     }
 }
+
+// main game function
+function game() {
+    startGame();
+    document.getElementById("rockBtn").addEventListener("click", function () {
+        updateScore("rock");
+    })
+    document.getElementById("paperBtn").addEventListener("click", function () {
+        updateScore("paper");
+    })
+    document.getElementById("scissorsBtn").addEventListener("click", function () {
+        updateScore("scissors");
+    })
+    /*
+    document.getElementById("restart").addEventListener("click", function (){
+        document.getElementById("updates").innerHTML = "";
+        document.getElementById("player-score").innerHTML = "";
+        document.getElementById("computer-score").innerHTML = "";
+        game();
+    })
+    */
+    
+}
+
+// set global variables
+let playerScore = 0;
+let computerScore = 0;
+let anyScore = 0;
+
 game();
