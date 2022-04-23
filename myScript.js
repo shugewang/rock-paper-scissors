@@ -76,7 +76,7 @@ function updateScore(playerSelection){
         computerScore += 1;
         result = "You lose! " + capitalize(computerSelection) + " beats " + capitalize(playerSelection) + "!";
     } else {
-        result = "It's a draw!";
+        result = "It's a draw! You both played " + playerSelection + "!";
     }
 
     let update = document.createElement("p");
@@ -91,6 +91,15 @@ function updateScore(playerSelection){
     }
 }
 
+// reset everything
+function resetGame() {
+    playerScore = 0;
+    computerScore = 0;
+    document.getElementById("updates").innerHTML = "";
+    document.getElementById("player-score").innerHTML = "";
+    document.getElementById("computer-score").innerHTML = "";
+}
+
 // main game function
 function game() {
     startGame();
@@ -103,20 +112,15 @@ function game() {
     document.getElementById("scissorsBtn").addEventListener("click", function () {
         updateScore("scissors");
     })
-    /*
-    document.getElementById("restart").addEventListener("click", function (){
-        document.getElementById("updates").innerHTML = "";
-        document.getElementById("player-score").innerHTML = "";
-        document.getElementById("computer-score").innerHTML = "";
-        game();
-    })
-    */
     
+    document.getElementById("restart").addEventListener("click", function (){
+        resetGame();
+        startGame();
+    })
 }
 
 // set global variables
 let playerScore = 0;
 let computerScore = 0;
-let anyScore = 0;
 
 game();

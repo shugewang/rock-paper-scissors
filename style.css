@@ -30,7 +30,7 @@ body {
     gap: 5vh;
 }
 
-p {
+h1, p{
     display:flex;
     align-items: center;
     justify-content: center;;
@@ -62,7 +62,7 @@ button:hover{
 #game-container{
     display:flex;
     flex-direction:column;
-    gap:5vh;
+    gap:10vh;
 }
 
 #game, #scores{
@@ -89,6 +89,7 @@ button:hover{
 .output {
     min-width: 15%;
     aspect-ratio: 1;
+    font-size:20px;
 }
 #scoreboard p {
     font-size:2rem;
