@@ -49,6 +49,7 @@ function startGame(){
     document.getElementById("start-button").addEventListener("click", function() {
         document.getElementById("game-container").style.display = "flex";
     });
+    document.getElementById("year").innerHTML = startYear;
 }
 
 // function to hide game-container and show end-container; report winner
@@ -114,6 +115,7 @@ function game() {
     })
     
     document.getElementById("restart").addEventListener("click", function (){
+        startYear += 1;
         resetGame();
         startGame();
     })
@@ -122,5 +124,6 @@ function game() {
 // set global variables
 let playerScore = 0;
 let computerScore = 0;
+let startYear = 2022;
 
 game();
