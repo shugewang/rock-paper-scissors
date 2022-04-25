@@ -7,11 +7,6 @@ function getRandomChoice(){
     return randomChoice;
 }
 
-// function to capitalize a word
-function capitalize(word){
-    return word[0].toUpperCase() + word.slice(1);
-}
-
 // function to play a single round
 function playRound(playerSelection, computerSelection){
     if (playerSelection === computerSelection){
@@ -72,10 +67,10 @@ function updateScore(playerSelection){
     let result = "";
     if (winner == "player"){
         playerScore += 1;
-        result = "You win! " + capitalize(playerSelection) + " beats " + capitalize(computerSelection) + "!";
+        result = "You win! " + playerSelection + " beats " + computerSelection + "!";
     } else if (winner == "computer"){
         computerScore += 1;
-        result = "You lose! " + capitalize(computerSelection) + " beats " + capitalize(playerSelection) + "!";
+        result = "You lose! " + computerSelection + " beats " + playerSelection + "!";
     } else {
         result = "It's a draw! You both played " + playerSelection + "!";
     }
@@ -87,7 +82,7 @@ function updateScore(playerSelection){
     document.getElementById("player-score").innerHTML = playerScore;
     document.getElementById("computer-score").innerHTML = computerScore;
     document.getElementById("computer-choice").style.display = "flex";
-    if (computerScore == 5 || playerScore == 5){
+    if (computerScore > 4 || playerScore > 4){
         finishGame();
     }
 }
