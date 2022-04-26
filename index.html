@@ -8,68 +8,73 @@
     </head>
 
     <body>
-        <div id="title">
-            <h1>Welcome to the <span id="year">2022</span> Rock Paper Scissiors Championship</h1>
-        </div>
+        <div id="page-wrapper">
+            <section class="margin" id="title-container">
+                <h1 id="title">Welcome to the <span id="year">2022</span> Rock Paper Scissiors Championship</h1>
+            </section>
 
-        <div id="start-container">
-            <div  id="rules">
-                <p>It's &nbsp;<u>You</u> &nbsp; versus &nbsp;<u>The Machine</u>.</p>
-                <p>First to 5 wins the Game.</p><br>
-                <h1>Are you up for the challenge?</h1>
-            </div>
+            <section id="start-container">
+                <div class="margin">
+                    <p>It's &nbsp;<u>You</u> &nbsp; versus &nbsp;<u>The Machine</u>.</p>
+                    <p>First to 5 wins the Game.</p><br>
+                    <h1>Are you up for the challenge?</h1>
+                </div>
 
-            <div class="flex-center" id="start">
-                <button id="start-button">YES</button>
-            </div>
-        </div>
-        
-        <div id="game-container">
-            <div class = "flex-even" id="game">
-                <div class="take-half" id="player">
-                    <h1>You</h1>
-                    <div class = "flex-even" id="player-choice">
-                        <button id="rockBtn" class="output" type="submit" value="rock">Rock</button>
-                        <button id="paperBtn" class="output" type="submit" value="paper">Paper</button>
-                        <button id="scissorsBtn" class="output" type="submit" value="scissors">Scissors</button>
+                <div class="center">
+                    <button id="start-button" type="button">YES</button>
+                </div>
+            </section>
+            
+            <section class="flex-col" id="game-container">
+                <div class="center margin" id="game">
+                    <div class="take-half" id="player">
+                        <h1>You</h1>
+                        <div class = "flex-between" id="player-choice">
+                            <button id="rockBtn" class="output" type="submit" value="rock">Rock</button>
+                            <button id="paperBtn" class="output" type="submit" value="paper">Paper</button>
+                            <button id="scissorsBtn" class="output" type="submit" value="scissors">Scissors</button>
+                        </div>
+                    </div>
+                    <div class="take-half" id="computer">
+                        <h1>The Machine</h1>
+                        <div class = "center">
+                            <p class="output" id="computer-choice">?</p>
+                        </div>
                     </div>
                 </div>
-                <div class="take-half" id="computer">
-                    <h1>The Machine</h1>
-                    <div class = "flex-even">
-                        <p class="output" id="computer-choice">?</p>
+
+                <div class="center" id="scores">
+                    <div class="take-half">
+                        <h1>Updates</h1>
+                        <div id="updates">
+                            <p class="emphasis update-line"></p>
+                            <p class="update-line"></p>
+                            <p class="update-line"></p>
+                        </div>
+                    </div>
+
+                    <div class="take-half" id="scoreboard">
+                        <h1>Scoreboard</h1>
+                        <div class="center">
+                            <div class="take-half">
+                                <h1>Your score</h1>
+                                <p id="player-score">0</p>
+                            </div>
+                            <div class="take-half">
+                                <h1>Machine score</h1>
+                                <p id="computer-score">0</p>
+                            </div>
                     </div>
                 </div>
-            </div>
-
-            <div id="scores">
-                <div class="take-half">
-                    <h1>Updates</h1>
-                    <div id="updates"></div>
                 </div>
+            </section>
 
-                <div class="take-half" id="scoreboard">
-                    <h1>Scoreboard</h1>
-                    <div class="flex-even">
-                        <div class="take-half">
-                            <h2>Your score</h2>
-                            <p id="player-score">0</p>
-                        </div>
-                        <div class="take-half">
-                            <h2>Machine score</h2>
-                            <p id="computer-score">0</p>
-                        </div>
+            <div id="end-container">
+                <h1>The winner is...</h1>
+                <h1 class="center" id="winner"></h1>
+                <div class="center">
+                    <button id="restart">Play again?</button>
                 </div>
-            </div>
-            </div>
-        </div>
-
-        <div id="end-container">
-            <h1>The winner is...</h1>
-            <h1 class="flex-center" id="winner"></h1>
-            <p id="final-score"></p>
-            <div class="flex-center">
-                <button id="restart">Play again?</button>
             </div>
         </div>
     </body>

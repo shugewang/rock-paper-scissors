@@ -65,6 +65,7 @@ function updateScore(playerSelection){
     let computerSelection = getRandomChoice();
     let winner = playRound(playerSelection, computerSelection);
     let result = "";
+
     if (winner == "player"){
         playerScore += 1;
         result = "You win! " + playerSelection + " beats " + computerSelection + "!";
@@ -75,10 +76,19 @@ function updateScore(playerSelection){
         result = "It's a draw! You both played " + playerSelection + "!";
     }
 
-    let update = document.createElement("p");
-    let node = document.createTextNode(result);
-    update.appendChild(node);
-    document.getElementById("updates").appendChild(update);
+    updatesArray.push(result);
+    console.log(updatesArray);
+    if (updatesArray.length < 2) {
+        document.querySelectorAll("#updates p")[0].textContent = updatesArray[updatesArray.length - 1];
+    } else if (updatesArray.length < 3) {
+        document.querySelectorAll("#updates p")[0].textContent = updatesArray[updatesArray.length - 1];
+        document.querySelectorAll("#updates p")[1].textContent = updatesArray[updatesArray.length - 2];
+    } else {
+        document.querySelectorAll("#updates p")[0].textContent = updatesArray[updatesArray.length - 1];
+        document.querySelectorAll("#updates p")[1].textContent = updatesArray[updatesArray.length - 2];
+        document.querySelectorAll("#updates p")[2].textContent = updatesArray[updatesArray.length - 3];
+    }
+    
     document.getElementById("player-score").innerHTML = playerScore;
     document.getElementById("computer-score").innerHTML = computerScore;
     document.getElementById("computer-choice").style.display = "flex";
@@ -91,7 +101,11 @@ function updateScore(playerSelection){
 function resetGame() {
     playerScore = 0;
     computerScore = 0;
-    document.getElementById("updates").innerHTML = "";
+    updatesArray = [];
+
+    for (let i = 0; i < document.getElementById("updates").children.length; i++) {
+        document.getElementById("updates").children[i].textContent = "";
+    }
     document.getElementById("player-score").innerHTML = "";
     document.getElementById("computer-score").innerHTML = "";
 }
@@ -120,5 +134,5 @@ function game() {
 let playerScore = 0;
 let computerScore = 0;
 let startYear = 2022;
-
+let updatesArray = [];
 game();
