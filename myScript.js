@@ -3,7 +3,7 @@
 function getRandomChoice(){
     plays = ["rock", "paper", "scissors"];
     randomChoice = plays[Math.floor(Math.random()*plays.length)];
-    document.getElementById("computer-choice").innerHTML = randomChoice;
+    document.getElementById("computer-output").innerHTML = randomChoice;
     return randomChoice;
 }
 
@@ -37,7 +37,7 @@ function startGame(){
     document.getElementById("start-container").style.display = "block";
     document.getElementById("game-container").style.display = "none";
     document.getElementById("end-container").style.display = "none";
-    //document.getElementById("computer-choice").style.display = "none";
+    //document.getElementById("computer-output").style.display = "none";
     document.getElementById("start-button").addEventListener("click", function() {
         document.getElementById("start-container").style.display = "none";
     });

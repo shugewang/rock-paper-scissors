@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Barrio&family=Raleway&display=swap');
 
-/*
+
 body * {
     border: 2px solid red;
 }
-*/
+
 
 :root{
     --main-blue:#EDF2EF;
@@ -108,4 +108,19 @@ button:hover{
 
 #winner {
     font-size:clamp(2rem, 20vw, 15vh);
+}
+
+@media only screen and (max-width: 600px) {
+    #player-choice{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2vh;
+        align-items: center;
+    }
+
+    .output {
+        width:40%;
+        aspect-ratio: 1;
+    }
 }
