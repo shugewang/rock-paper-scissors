@@ -77,7 +77,8 @@ function updateScore(playerSelection){
     }
 
     updatesArray.push(result);
-    console.log(updatesArray);
+
+    // better way to do this?
     if (updatesArray.length < 2) {
         document.querySelectorAll("#updates p")[0].textContent = updatesArray[updatesArray.length - 1];
     } else if (updatesArray.length < 3) {
@@ -91,7 +92,6 @@ function updateScore(playerSelection){
     
     document.getElementById("player-score").innerHTML = playerScore;
     document.getElementById("computer-score").innerHTML = computerScore;
-    document.getElementById("computer-choice").style.display = "flex";
     if (computerScore > 4 || playerScore > 4){
         finishGame();
     }
