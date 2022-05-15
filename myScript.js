@@ -34,15 +34,14 @@ function playRound(playerSelection, computerSelection){
 
 // function to hide start-container and show game-container
 function startGame(){
-    document.getElementById("start-container").style.display = "block";
-    document.getElementById("game-container").style.display = "none";
+    startContainer.style.display = "block";
+    gameContainer.style.display = "none";
     document.getElementById("end-container").style.display = "none";
-    //document.getElementById("computer-output").style.display = "none";
     document.getElementById("start-button").addEventListener("click", function() {
-        document.getElementById("start-container").style.display = "none";
+        startContainer.style.display = "none";
     });
     document.getElementById("start-button").addEventListener("click", function() {
-        document.getElementById("game-container").style.display = "flex";
+        gameContainer.style.display = "flex";
     });
     document.getElementById("year").innerHTML = startYear;
 }
@@ -50,7 +49,7 @@ function startGame(){
 // function to hide game-container and show end-container; report winner
 function finishGame (){
     let champion = "";
-    document.getElementById("game-container").style.display = "none";
+    gameContainer.style.display = "none";
     document.getElementById("end-container").style.display = "block";
     if (computerScore > playerScore) {
         champion = "The Machine!";
@@ -80,14 +79,14 @@ function updateScore(playerSelection){
 
     // better way to do this?
     if (updatesArray.length < 2) {
-        document.querySelectorAll("#updates p")[0].textContent = updatesArray[updatesArray.length - 1];
+        updatesP[0].textContent = updatesArray[updatesArray.length - 1];
     } else if (updatesArray.length < 3) {
-        document.querySelectorAll("#updates p")[0].textContent = updatesArray[updatesArray.length - 1];
-        document.querySelectorAll("#updates p")[1].textContent = updatesArray[updatesArray.length - 2];
+        updatesP[0].textContent = updatesArray[updatesArray.length - 1];
+        updatesP[1].textContent = updatesArray[updatesArray.length - 2];
     } else {
-        document.querySelectorAll("#updates p")[0].textContent = updatesArray[updatesArray.length - 1];
-        document.querySelectorAll("#updates p")[1].textContent = updatesArray[updatesArray.length - 2];
-        document.querySelectorAll("#updates p")[2].textContent = updatesArray[updatesArray.length - 3];
+        updatesP[0].textContent = updatesArray[updatesArray.length - 1];
+        updatesP[1].textContent = updatesArray[updatesArray.length - 2];
+        updatesP[2].textContent = updatesArray[updatesArray.length - 3];
     }
     
     document.getElementById("player-score").innerHTML = playerScore;
@@ -135,4 +134,8 @@ let playerScore = 0;
 let computerScore = 0;
 let startYear = 2022;
 let updatesArray = [];
+let startContainer = document.getElementById("start-container");
+let gameContainer = document.getElementById("game-container");
+let updatesP = document.querySelectorAll("#updates p");
+
 game();
