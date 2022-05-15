@@ -6,7 +6,7 @@ First CSS/JS project.
 ## Description
 The game allows you to play against the computer, with the winner being the one who first scores 5 points. You can choose to replay after each game.
 
-<image src="https://user-images.githubusercontent.com/101587342/168478421-2fab0674-d49e-4624-bc0f-20dca9777fcb.png" width="250" height="200"><image src="https://user-images.githubusercontent.com/101587342/168478426-04957df7-f597-4a6a-8df3-398d332cdbef.png" width="250" height="200"><image src="https://user-images.githubusercontent.com/101587342/168478430-eaedf2e4-34f3-4424-9783-0d252f4866c0.png" width="250" height="200">
+<image src="https://user-images.githubusercontent.com/101587342/168478421-2fab0674-d49e-4624-bc0f-20dca9777fcb.png" width="300" height="200"> <image src="https://user-images.githubusercontent.com/101587342/168478426-04957df7-f597-4a6a-8df3-398d332cdbef.png" width="300" height="200"> <image src="https://user-images.githubusercontent.com/101587342/168478430-eaedf2e4-34f3-4424-9783-0d252f4866c0.png" width="300" height="200">
 
 ## Experience
 The project was part of the Odin project curriculum and consisted of two parts. 
