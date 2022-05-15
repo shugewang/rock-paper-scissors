@@ -6,7 +6,7 @@ First CSS/JS project.
 ## Description
 The game allows you to play against the computer, with the winner being the one who first scores 5 points. You can choose to replay after each game.
 
-![2022-05-15_14-58](https://user-images.githubusercontent.com/101587342/168478421-2fab0674-d49e-4624-bc0f-20dca9777fcb.png)
+![2022-05-15_14-58](https://user-images.githubusercontent.com/101587342/168478421-2fab0674-d49e-4624-bc0f-20dca9777fcb.png | width=200px)
 
 ![2022-05-15_14-58_1](https://user-images.githubusercontent.com/101587342/168478426-04957df7-f597-4a6a-8df3-398d332cdbef.png)
 
